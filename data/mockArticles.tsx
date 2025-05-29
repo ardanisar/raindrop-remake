@@ -14,6 +14,7 @@ export type Article = {
     likes: number;
     comments: number;
   };
+  link: string;
 };
 
 export type Author = {
@@ -49,6 +50,7 @@ export const mockArticles = [
       likes: 100,
       comments: 4,
     },
+    link: "https://blog.raindrop.io/ai-suggestions-5a85762ae176",
   },
   {
     id: "2",
@@ -69,6 +71,7 @@ export const mockArticles = [
       likes: 131,
       comments: 15,
     },
+    link: "https://blog.raindrop.io/bookmark-notes-8057b3e2a48f",
   },
   {
     id: "3",
@@ -89,6 +92,7 @@ export const mockArticles = [
       likes: 72,
       comments: 1,
     },
+    link: "https://blog.raindrop.io/export-subset-of-bookmarks-c3f9993110c8",
   },
   {
     id: "4",
@@ -109,6 +113,7 @@ export const mockArticles = [
       likes: 77,
       comments: 2,
     },
+    link: "https://blog.raindrop.io/new-feature-reminders-a2d260408b74",
   },
   {
     id: "5",
@@ -128,6 +133,7 @@ export const mockArticles = [
       likes: 7,
       comments: 0,
     },
+    link: "https://blog.raindrop.io/two-factor-authentication-2fa-1a320fa2eed7",
   },
   {
     id: "6",
@@ -147,6 +153,7 @@ export const mockArticles = [
       likes: 35,
       comments: 6,
     },
+    link: "https://blog.raindrop.io/ios-ipados-app-5-0-8d5dc9c14751",
   },
   {
     id: "7",
@@ -166,6 +173,7 @@ export const mockArticles = [
       likes: 100,
       comments: 3,
     },
+    link: "https://blog.raindrop.io/highlights-533ef2f91000",
   },
   {
     id: "8",
@@ -186,6 +194,7 @@ export const mockArticles = [
       likes: 19,
       comments: 0,
     },
+    link: "https://blog.raindrop.io/automatic-backup-new-csv-format-95546ee1db9b",
   },
   {
     id: "9",
@@ -205,6 +214,7 @@ export const mockArticles = [
       likes: 193,
       comments: 9,
     },
+    link: "https://blog.raindrop.io/search-2-0-6006bcc7f9a2",
   },
   {
     id: "10",
@@ -224,5 +234,6 @@ export const mockArticles = [
       likes: 122,
       comments: 6,
     },
+    link: "https://blog.raindrop.io/save-all-tabs-35e5581ab1c8",
   },
 ];

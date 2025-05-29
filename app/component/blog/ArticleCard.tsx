@@ -122,7 +122,7 @@ function ArticleCard({ article, className }: ArticleCardProps) {
                               <a
                                 className="flex-col flex static cursor-pointer m-0 p-0 z-2"
                                 rel="noopener follow"
-                                // href="/ai-suggestions-5a85762ae176?source=collection_home_page----64dc68379046-----0-----------------------------------"
+                                href={article.link}
                               >
                                 <h2
                                   className="leading-[30px] text-[24px] font-[700] text-ellipsis overflow-hidden text-[#242424] m-0"
