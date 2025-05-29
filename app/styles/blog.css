@@ -1,0 +1,323 @@
+@import "tailwindcss";
+
+
+body {
+  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@theme {
+  --breakpoint-1080px: 1080px;
+  --breakpoint-904px: 904px;
+  --breakpoint-900px: 900px;
+  --breakpoint-800px: 800px;
+  --breakpoint-552px: 552px;
+  --breakpoint-728px: 728px;
+  --breakpoint-368px: 368px;
+}
+
+@media (min-width: 728px) and (max-width: 903.98px) {
+  .main {
+      max-width: 100%;
+  }
+}
+
+@media (min-width: 1080px) {
+  .main {
+    max-width: calc(100% - 368px);
+  }
+}
+
+@media (min-width: 728px) {
+  .mt-logo {
+      margin: 52px 0 48px;
+  }
+}
+
+@media (max-width: 727.98px) {
+  .mt-logo {
+      margin: 24px 0;
+  }
+}
+
+@media (min-width: 728px) and (max-width: 903.98px) {
+  .mp {
+      max-width: 680px;
+  }
+}
+
+
+
+@media (min-width: 728px) and (max-width: 903.98px) {
+  .raindrop-profile {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 904px) and (max-width: 1079.98px) {
+  .raindrop-profile {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 727.98px) {
+  .raindrop-profile {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-bottom: 24px;
+      justify-content: space-between;
+  }
+}
+
+@media (min-width: 1080px) {
+  .raindrop-profile {
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 728px) and (max-width: 903.98px) {
+  .logo {
+      align-items: flex-start;
+  }
+}
+
+ @media (min-width: 728px) {
+  .raindrop-logo {
+    height: 60px;
+      width: 313px;
+  }
+}
+
+ @media (max-width: 551.98px) {
+  .raindrop-logo {
+    height: 40px;
+    width: 209px;
+  }
+}
+
+ @media (max-width: 551.98px) {
+  .follow-button {
+    flex: 0 0 100%;
+    margin-top: 20px;
+    justify-content: space-between;
+    display: flex;
+  }
+}
+
+@media (min-width: 552px) and (max-width: 727.98px) {
+  .follow-button {
+  flex: 0 0 100%;
+  margin-top: 20px;
+  justify-content: space-between;
+  display: flex;
+  }
+}
+
+ @media (min-width: 904px) {
+  .follow-button {
+      flex: 0 0 content;
+      justify-content: flex-end;
+      display: none;
+  }
+}
+
+.layout2ACP {
+    display: grid
+;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto;
+    grid-column-gap: 70px;
+}
+
+.contentoxL5 {
+    margin: 0 auto;
+    max-width: 1060px;
+    padding: 0 30px;
+}
+
+/* landing2Gps */
+/* .video-card-grid h4 {
+  font-size: 1.5rem;
+  line-height: 1.42;
+  font-weight: normal;
+} */
+
+/* h1 untuk yg di landing2gps */
+/* .video-card-grid h1 {
+  font-size: 3.125rem;
+  line-height: 1.12;
+  font-weight: 600;
+  text-align: left;
+} */
+
+/* h1 keseluruhan untuk landing page */
+/* .landing-page h1 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  display: block;
+  font-size: 2.125rem;
+  margin-top: 42px;
+  margin-bottom: 16px;
+} */
+
+ /* keseluruhan */
+/* .landing-page h4 {
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+} */
+
+.button-video-card {
+  font-size: 1.125rem;
+  padding: 10px 24px;
+  margin-right: 10px;
+  user-select: none;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  -webkit-appearance: none;
+  box-shadow: none;
+  font-weight: 550;
+  border-radius: 8px;
+  padding: 8px 14px;
+  transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+  display: inline-flex
+;
+}
+
+/* .button-video-card[data-appearance='primary'] {
+    background: #0b7ed0;
+    color: #fff;
+}
+
+.button-video-card[data-size='big'] {
+    font-size: 1.125rem;
+    padding: 10px 24px;
+}
+.button-video-card  {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    -webkit-appearance: none;
+    box-shadow: none;
+    font-weight: 550;
+    border-radius: 8px;
+    padding: 8px 14px;
+    transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
+    display: inline-flex;
+} 
+
+.button-video-card[data-appearance=''] {
+    color: #0b7ed0;
+}
+.button-video-card[data-size='big'] {
+    font-size: 1.125rem;
+    padding: 10px 24px;
+} */
+
+.blog-nav {
+  overflow: hidden;
+  box-shadow: inset 0 -1px 0 #F2F2F2;
+  position: relative;
+  display: block;
+}
+
+.blog-nav-box {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  align-items: center;
+  display: flex;
+  max-width: 368px;
+}
+
+.blog-nav-list {
+  min-width: max-content;
+  border-bottom: 1px solid #242424;
+  padding-bottom: 16px;
+  margin-right: 32px;
+  display: block;
+}
+
+.profil-img-article {
+  width: 20px;
+  height: 20px;
+  background-color: #F2F2F2;
+  box-sizing: border-box;
+  display: block;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.profil-pict-article2 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+  border: none;
+  top: 0;
+  display: block;
+  border-radius: 50%;
+}
+
+.lk {
+  gap: 16px;
+  transition: opacity 300ms ease-out;
+  opacity: 0;
+  position: absolute;
+  align-items: center;
+  display: flex
+}
+
+
+@media (min-width: 1080px) {
+  .sidebar {
+    max-width: 368px;
+    min-width: 368px;
+    display: block;
+    padding-left: clamp(24px, 24px + 100vw - 1080px, 40px);
+  }
+}
+
+ @media (min-width: 904px) and (max-width: 1079.98px) {
+  .sidebar {
+      max-width: 352px;
+      min-width: 352px;
+      display: block;
+      padding-left: 24px;
+  }
+}
+
+ @media (min-width: 904px) and (max-width: 1079.98px) {
+  .likescomments1 {
+      width: 100%;
+      padding-top: 10px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .likescomments1 {
+      width: 100%;
+      padding-top: 10px;
+  }
+}
