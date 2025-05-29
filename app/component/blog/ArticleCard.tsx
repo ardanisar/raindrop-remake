@@ -4,9 +4,10 @@ import React from "react";
 import LikesComments from "./LikesComments";
 import LikesComments1 from "./LikesComments1";
 import HoverProfile from "./HoverProfile";
+import { Article } from "@/data/mockArticles";
 
 type ArticleCardProps = {
-  article: any;
+  article: Article;
   className?: string;
 };
 
@@ -30,8 +31,7 @@ function ArticleCard({ article, className }: ArticleCardProps) {
               <div className="h-full w-full">
                 <div className="block">
                   <div className="w-full block">
-                    {/* ini box isi keseluruhan artikelnya */}
-                    {/* harusnya relative flex tp jadi aneh sihh */}
+                    {/* box artile */}
                     <div className="relative">
                       <div className="w-full">
                         {/* profil pict and name */}
@@ -116,13 +116,13 @@ function ArticleCard({ article, className }: ArticleCardProps) {
                         {/* article and image */}
                         <div className="flex">
                           {/* article*/}
-                          <div className="break-words block flex-[1_1_auto] max-w-[464px]">
+                          <div className="break-words block flex-[1_1_0%] min-w-0 max-w-[464px]">
                             {/* article */}
                             <div className="break-words">
                               <a
                                 className="flex-col flex static cursor-pointer m-0 p-0 z-2"
                                 rel="noopener follow"
-                                href="/ai-suggestions-5a85762ae176?source=collection_home_page----64dc68379046-----0-----------------------------------"
+                                // href="/ai-suggestions-5a85762ae176?source=collection_home_page----64dc68379046-----0-----------------------------------"
                               >
                                 <h2
                                   className="leading-[30px] text-[24px] font-[700] text-ellipsis overflow-hidden text-[#242424] m-0"
@@ -146,11 +146,11 @@ function ArticleCard({ article, className }: ArticleCardProps) {
                           </div>
                           {/* image */}
                           <div className="ml-[24px] 728px:ml-[56px] block">
-                            <div aria-label="AI Suggestions">
+                            <div aria-label={article.title}>
                               <div className="728px:hidden">
                                 <img
-                                  alt="AI Suggestions"
-                                  className="rounded-[2px] bg-[#F9F9F9] align-middle h-[53px] aspect-[80/53];"
+                                  alt={article.title}
+                                  className="rounded-[2px] bg-[#F9F9F9] align-middle w-[80px] h-[53px] object-cover"
                                   src={article.coverImage}
                                   width="80"
                                   height="53"
@@ -159,8 +159,8 @@ function ArticleCard({ article, className }: ArticleCardProps) {
                               </div>
                               <div className="hidden 728px:block">
                                 <img
-                                  alt="AI Suggestions"
-                                  className="rounded-[2px] bg-[#F9F9F9] align-middle h-[107px] aspect-[160/107]"
+                                  alt={article.title}
+                                  className="rounded-[2px] bg-[#F9F9F9] align-middle w-[160px] h-[107px] object-cover"
                                   src={article.coverImage}
                                   width="160"
                                   height="107"

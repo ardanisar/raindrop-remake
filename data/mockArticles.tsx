@@ -1,3 +1,33 @@
+export type Article = {
+  id: string;
+  title: string;
+  author: {
+    name: string;
+    avatar: string;
+    bio: string;
+    followers: string;
+  };
+  publishedAt: string;
+  excerpt: string;
+  coverImage: string;
+  stats: {
+    likes: number;
+    comments: number;
+  };
+};
+
+export type Author = {
+  name: string;
+  avatar: string;
+  bio: string;
+  followers: string;
+};
+
+export type Stats = {
+  likes: number;
+  comments: number;
+};
+
 export const mockArticles = [
   {
     id: "1",
