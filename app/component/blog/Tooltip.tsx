@@ -10,7 +10,7 @@ const Tooltip: React.FC<TooltipProps> = ({ text, children }) => {
 
   return (
     <div
-      className="relative inline-block"
+      className="relative inline-flex items-center"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

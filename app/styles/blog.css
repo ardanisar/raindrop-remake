@@ -15,6 +15,16 @@ body {
   --breakpoint-368px: 368px;
 }
 
+.bg-fade-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.75) 25%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 1) 75%
+  );
+}
+
 @media (min-width: 728px) and (max-width: 903.98px) {
   .main {
       max-width: 100%;

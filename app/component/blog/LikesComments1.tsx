@@ -96,45 +96,47 @@ function LikesComments1({ publishedAt, stats }: LikesComments1Props) {
                 </div>
               </div>
             </div>
-            <Tooltip text="Save">
-              <div className="o p lu lv">
-                <div className="">
-                  <div>
-                    <div
-                      className="ci"
-                      aria-hidden="false"
-                      aria-describedby="967"
-                      aria-labelledby="967"
-                    >
-                      <div tabIndex={-1} className="no-outline">
-                        <span>
-                          <a
-                            className="cm aq cn co cp at cq au av aw ax ay az ba bb hover:fill-[#242424]"
-                            href="https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fbookmark%2Fp%2F5a85762ae176&amp;operation=register&amp;redirect=https%3A%2F%2Fblog.raindrop.io%2Fai-suggestions-5a85762ae176&amp;source=----64dc68379046-----0-----------------bookmark_preview------------------"
-                            rel="noopener follow"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="25"
-                              height="25"
-                              fill="none"
-                              viewBox="0 0 25 25"
-                              className="ap lw lx hover:text-[#242424]"
-                              aria-label="Add to list bookmark button"
+            <div className="flex items-center gap-4">
+              <Tooltip text="Save">
+                <div className="flex items-center justify-end">
+                  <div className="">
+                    <div>
+                      <div
+                        className="inline-block"
+                        aria-hidden="false"
+                        aria-describedby="967"
+                        aria-labelledby="967"
+                      >
+                        <div tabIndex={-1} className="no-outline">
+                          <span>
+                            <a
+                              className="z-2 relative cursor-pointe"
+                              href="https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fbookmark%2Fp%2F5a85762ae176&amp;operation=register&amp;redirect=https%3A%2F%2Fblog.raindrop.io%2Fai-suggestions-5a85762ae176&amp;source=----64dc68379046-----0-----------------bookmark_preview------------------"
+                              rel="noopener follow"
                             >
-                              <path
-                                fill="currentColor"
-                                d="M18 2.5a.5.5 0 0 1 1 0V5h2.5a.5.5 0 0 1 0 1H19v2.5a.5.5 0 1 1-1 0V6h-2.5a.5.5 0 0 1 0-1H18zM7 7a1 1 0 0 1 1-1h3.5a.5.5 0 0 0 0-1H8a2 2 0 0 0-2 2v14a.5.5 0 0 0 .805.396L12.5 17l5.695 4.396A.5.5 0 0 0 19 21v-8.5a.5.5 0 0 0-1 0v7.485l-5.195-4.012a.5.5 0 0 0-.61 0L7 19.985z"
-                              ></path>
-                            </svg>
-                          </a>
-                        </span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="25"
+                                height="25"
+                                fill="none"
+                                viewBox="0 0 25 25"
+                                className="hover:text-[#242424]"
+                                aria-label="Add to list bookmark button"
+                              >
+                                <path
+                                  fill="currentColor"
+                                  d="M18 2.5a.5.5 0 0 1 1 0V5h2.5a.5.5 0 0 1 0 1H19v2.5a.5.5 0 1 1-1 0V6h-2.5a.5.5 0 0 1 0-1H18zM7 7a1 1 0 0 1 1-1h3.5a.5.5 0 0 0 0-1H8a2 2 0 0 0-2 2v14a.5.5 0 0 0 .805.396L12.5 17l5.695 4.396A.5.5 0 0 0 19 21v-8.5a.5.5 0 0 0-1 0v7.485l-5.195-4.012a.5.5 0 0 0-.61 0L7 19.985z"
+                                ></path>
+                              </svg>
+                            </a>
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Tooltip>
+              </Tooltip>
+            </div>
           </div>
         </span>
       </div>
