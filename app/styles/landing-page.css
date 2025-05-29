@@ -573,16 +573,17 @@ p {
     }
 }
 
-@media only screen and (min-width: 1001px) {
-    .ferrari1vBH, .columns2vfz {
-        grid-template-columns: 1fr 1fr;
-    }
-}
 .columns2vfz {
     display: grid;
     grid-template-columns: 1fr;
     grid-column-gap: 100px;
     padding-bottom: 40px;
+}
+
+@media only screen and (min-width: 1001px) {
+    .ferrari1vBH, .columns2vfz {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .columns2vfz h2 {
