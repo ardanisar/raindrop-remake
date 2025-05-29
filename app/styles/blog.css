@@ -143,43 +143,6 @@ body {
     padding: 0 30px;
 }
 
-/* landing2Gps */
-/* .video-card-grid h4 {
-  font-size: 1.5rem;
-  line-height: 1.42;
-  font-weight: normal;
-} */
-
-/* h1 untuk yg di landing2gps */
-/* .video-card-grid h1 {
-  font-size: 3.125rem;
-  line-height: 1.12;
-  font-weight: 600;
-  text-align: left;
-} */
-
-/* h1 keseluruhan untuk landing page */
-/* .landing-page h1 {
-  margin: 0;
-  padding: 0;
-  font-weight: 600;
-  display: block;
-  font-size: 2.125rem;
-  margin-top: 42px;
-  margin-bottom: 16px;
-} */
-
- /* keseluruhan */
-/* .landing-page h4 {
-  display: block;
-  margin-block-start: 1.33em;
-  margin-block-end: 1.33em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
-  unicode-bidi: isolate;
-} */
-
 .button-video-card {
   font-size: 1.125rem;
   padding: 10px 24px;
@@ -195,44 +158,8 @@ body {
   border-radius: 8px;
   padding: 8px 14px;
   transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
-  display: inline-flex
-;
+  display: inline-flex;
 }
-
-/* .button-video-card[data-appearance='primary'] {
-    background: #0b7ed0;
-    color: #fff;
-}
-
-.button-video-card[data-size='big'] {
-    font-size: 1.125rem;
-    padding: 10px 24px;
-}
-.button-video-card  {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    border: 0;
-    -webkit-appearance: none;
-    box-shadow: none;
-    font-weight: 550;
-    border-radius: 8px;
-    padding: 8px 14px;
-    transition: box-shadow 0.2s ease-in-out, background 0.2s ease-in-out;
-    display: inline-flex;
-} 
-
-.button-video-card[data-appearance=''] {
-    color: #0b7ed0;
-}
-.button-video-card[data-size='big'] {
-    font-size: 1.125rem;
-    padding: 10px 24px;
-} */
 
 .blog-nav {
   overflow: hidden;

@@ -17,7 +17,6 @@ function ImageCard({ title, text, sections, clname }: ImageCardProps) {
   return (
     <>
       <div className={`blob1U5Q ${clname}`}>
-        {/* <div className="blob1U5Q left1x3n organize1xl3"> */}
         <div className="grid178A">
           {/* title */}
           <div>
@@ -26,8 +25,6 @@ function ImageCard({ title, text, sections, clname }: ImageCardProps) {
               {title}
             </h2>
             <blockquote className="text-[1.125rem] leading-[1.45]">
-              {/* Raindrop.io is not just a pretty interface, it can help you
-              untangle your bookmarks mess. */}
               {text}
             </blockquote>
             {/* list */}
@@ -88,7 +85,7 @@ function ImageCard({ title, text, sections, clname }: ImageCardProps) {
               ))}
             </div>
           </div>
-          {/* image untuk screen besar */}
+          {/* image for big screen */}
           <div className="heroImages1RTg">
             {sections.map((section, index) => (
               <div
@@ -108,7 +105,6 @@ function ImageCard({ title, text, sections, clname }: ImageCardProps) {
             ))}
           </div>
         </div>
-        {/* // ))} */}
       </div>
     </>
   );

@@ -27,7 +27,6 @@ function page() {
                 <RaindropMediumProfile />
                 {/* article */}
                 <div className="py-[8px] block">
-                  {/* yg class ir y*/}
                   <div className="article-list">
                     {mockArticles.map((article, index) => (
                       <ArticleCard

@@ -1,7 +1,4 @@
-"use client";
-
 import React from "react";
-import { useState } from "react";
 import Tooltip from "./Tooltip";
 
 type LikesComments1Props = {
@@ -11,8 +8,6 @@ type LikesComments1Props = {
 };
 
 function LikesComments1({ publishedAt, likes, comments }: LikesComments1Props) {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <div className="728px:block hidden">
       <div className="likescomments1 block">
@@ -106,8 +101,6 @@ function LikesComments1({ publishedAt, likes, comments }: LikesComments1Props) {
                 <div className="">
                   <div>
                     <div
-                      // onMouseEnter={() => setIsHovered(true)}
-                      // onMouseLeave={() => setIsHovered(false)}
                       className="ci"
                       aria-hidden="false"
                       aria-describedby="967"
@@ -138,28 +131,6 @@ function LikesComments1({ publishedAt, likes, comments }: LikesComments1Props) {
                         </span>
                       </div>
                     </div>
-                    {/* hover bookmark ini kayanya buat like comments1 sih*/}
-                    {/* {isHovered && ( */}
-                    {/* <Tooltip text="Save"> */}
-                    {/* <div
-                      className="fixed left-0 bottom-0 translate-x-[474px] -translate-y-[183px] z-[700] text-white rounded box-border"
-                      data-popper-reference-hidden="false"
-                      data-popper-escaped="false"
-                      data-popper-placement="top"
-                    >
-                      <div className="rounded-[4px] bg-white">
-                        <div id="6" className="rounded-[3px] bg-[#242424]">
-                          <div className="p-[8px] text-center block">
-                            <span className="text-[13px] leading-[20px] font-[400] text-center whitespace-nowrap">
-                              Save
-                            </span>
-                          </div>
-                        </div>
-                        <div className="absolute bottom-[-6px] left-[17px] w-0 h-0 border-l-[6px] border-r-[6px] border-t-[6px] border-l-transparent border-r-transparent border-t-[#242424] pointer-events-none z-[-1]"></div>
-                      </div>
-                    </div> */}
-                    {/* </Tooltip> */}
-                    {/* )} */}
                   </div>
                 </div>
               </div>

@@ -628,6 +628,10 @@ blockquote {
     margin-right: 24px;
 }
 
+.link3Vpv:hover{
+    text-decoration: underline;
+}
+
 .link3Vpv svg {
     margin-right: 6px;
     vertical-align: -2px;
@@ -828,6 +832,10 @@ a {
 
 .message2nN3 blockquote a {
     font-weight: 500;
+}
+
+.message2nN3 blockquote a:hover {
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 1000px) {

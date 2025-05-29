@@ -14,64 +14,30 @@ type HoverProfileProps = {
 
 function HoverProfile({ children, profileData }: HoverProfileProps) {
   const [show, setShow] = useState(false);
-  // const [position, setPosition] = useState<"top" | "bottom">("top");
-  // const containerRef = useRef<HTMLDivElement>(null);
 
-  // useEffect(() => {
-  //   if (show && containerRef.current) {
-  //     const rect = containerRef.current.getBoundingClientRect();
-  //     const spaceAbove = rect.top;
-  //     const spaceBelow = window.innerHeight - rect.bottom;
-
-  //     if (spaceBelow < 400 && spaceAbove > spaceBelow) {
-  //       setPosition("top");
-  //     } else {
-  //       setPosition("bottom");
-  //     }
-  //   }
-  // }, [show]);
-
-  // Ref untuk elemen pemicu hover dan tooltip
-  // const [referenceElement, setReferenceElement] = useState();
-  // const [popperElement, setPopperElement] = useState();
   const [referenceElement, setReferenceElement] =
     useState<HTMLDivElement | null>(null);
   const [popperElement, setPopperElement] = useState<HTMLDivElement | null>(
     null
   );
 
-  // Gunakan hook usePopper untuk posisi otomatis
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
     placement: "top",
     modifiers: [
-      { name: "offset", options: { offset: [0, 8] } }, // jarak 8px
+      { name: "offset", options: { offset: [0, 8] } },
       { name: "preventOverflow", enabled: true },
-      // flip juga on secara default, tapi kalau mau eksplisit:
       {
         name: "flip",
         enabled: true,
         options: { fallbackPlacements: ["bottom"] },
       },
     ],
-    // modifiers: [
-    //   { name: "offset", options: { offset: [0, 8] } },
-    //   {
-    //     name: "preventOverflow",
-    //     options: { padding: 8 },
-    //   },
-    //   {
-    //     name: "flip",
-    //     options: { fallbackPlacements: ["bottom", "right", "left"] },
-    //   },
-    //   { name: "shift", options: { padding: 8 } },
-    // ],
   });
 
   return (
     <div
       ref={setReferenceElement}
       style={{ display: "inline-block" }}
-      // style={{ display: "inline-block", position: "relative" }}
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
     >
@@ -82,15 +48,10 @@ function HoverProfile({ children, profileData }: HoverProfileProps) {
             ref={setPopperElement}
             style={styles.popper}
             {...attributes.popper}
-            // className={`absolute left-1/2 z-50 mb-2 -translate-x-1/2
-            //   ${position === "top" ? "bottom-full" : "top-full"}`}
             className="z-[9999] shadow-[0_0_4px_rgba(0,0,0,0.05),0_2px_8px_rgba(0,0,0,0.15)] rounded box-border"
-            // className="absolute bottom-full left-1/2 mb-2 -translate-x-1/2 z-50 shadow-[0_0_4px_rgba(0,0,0,0.05),0_2px_8px_rgba(0,0,0,0.15)] rounded box-border"
-            // className="bottom-0 left-0 translate-x-[5px] -translate-y-[259px] z-[700] shadow-[0_0_4px_rgba(0,0,0,0.05),0_2px_8px_rgba(0,0,0,0.15)] rounded box-border"
             data-popper-reference-hidden="false"
             data-popper-escaped="false"
             data-popper-placement="top"
-            // style="position: fixed; inset: auto auto 0px 0px; transform: translate(5px, -259px);"
           >
             <div className="rounded-[4px] bg-white">
               <div id="2" className="rounded-[3px] bg-white">
@@ -150,10 +111,7 @@ function HoverProfile({ children, profileData }: HoverProfileProps) {
                       </div>
                     </a>
                     <div className="inline-block" aria-hidden="false">
-                      <button
-                        className="overflow-visible m-0 flex items-center justify-center cursor-pointer w-[66px] py-[6px] px-[12px] relative z-2 border-[#242424] border-solid border rounded-2xl"
-                        // style="border: 1px solid rgb(36, 36, 36);"
-                      >
+                      <button className="overflow-visible m-0 flex items-center justify-center cursor-pointer w-[66px] py-[6px] px-[12px] relative z-2 border-[#242424] border-solid border rounded-2xl">
                         <span className="text-[#242424] text-[14px] leading-[20px] w-full font-[400]">
                           <span className="inline-block break-keep">
                             Follow

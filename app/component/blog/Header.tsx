@@ -29,7 +29,6 @@ function Header() {
               </svg>
             </a>
             {/* sign up sign in */}
-            {/* ini ga muncul kalo layar besar */}
             <div className="flex items-center">
               <p className="leading-[20px] text-[13px] text-[#6B6B6B] font-[400] m-0">
                 <span>
@@ -62,9 +61,6 @@ function Header() {
           {/* header line 2 */}
           <div className="w-full justify-between h-[57px] border-b-[1px] border-[#F2F2F2] px-[24px] items-center flex font-[400]">
             {/* medium logo */}
-            {/* searchbar lengkap sama medium bareng dikiri harusnya */}
-            {/* coba kasih div medium dan logo sama div sisanya */}
-            {/* insyaallah usah selesai headbar blog */}
             <div className="flex justify-start">
               <div className="flex items-center flex-[1_0_auto]">
                 <a
@@ -125,7 +121,6 @@ function Header() {
                     tabIndex={0}
                     className="p-[10px_20px_10px_0] text-[14px] leading-[20px] w-full"
                     placeholder="Search"
-                    // value=""
                   />
                 </div>
               </div>
@@ -165,7 +160,7 @@ function Header() {
                   </span>
                 </div>
               </div>
-              {/* searchbar icon aja */}
+              {/* searchbar icon */}
               <div className="md:hidden">
                 <div className="mr-[32px] flex">
                   <a
@@ -195,7 +190,7 @@ function Header() {
                 </div>
               </div>
               {/* sign up sign in */}
-              {/* ini cuma muncul kalo layar besar */}
+              {/* show only on big screen */}
               <div className="hidden 900px:block">
                 <div className="flex items-center mr-[32px]">
                   <p className="leading-[20px] text-[13px] text-[#6B6B6B] font-[400] m-0">

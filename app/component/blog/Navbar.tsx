@@ -75,37 +75,6 @@ function Navbar() {
         </span>
       </div>
     </nav>
-
-    // <>
-    //   {/* Navigation Links */}
-    //   <nav className="border-b border-gray-200 pb-3">
-    //     <ul className="flex space-x-8">
-    //       <li>
-    //         <a
-    //           href="#"
-    //           className="text-[#242424] font-medium border-b border-[#242424] pb-3"
-    //         >
-    //           Home
-    //         </a>
-    //       </li>
-    //       <li>
-    //         <a href="#" className="text-gray-500 hover:text-[#242424] pb-3">
-    //           About
-    //         </a>
-    //       </li>
-    //       <li>
-    //         <a href="#" className="text-gray-500 hover:text-[#242424] pb-3">
-    //           Updates
-    //         </a>
-    //       </li>
-    //       <li>
-    //         <a href="#" className="text-gray-500 hover:text-[#242424] pb-3">
-    //           Go to App
-    //         </a>
-    //       </li>
-    //     </ul>
-    //   </nav>
-    // </>
   );
 }
 

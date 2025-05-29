@@ -13,14 +13,6 @@ const Tooltip: React.FC<TooltipProps> = ({ text, children }) => {
       className="relative inline-block"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      // onMouseEnter={() => {
-      //   setIsHovered(true);
-      //   console.log("onMouseEnter triggered, isHovered will be true");
-      // }}
-      // onMouseLeave={() => {
-      //   setIsHovered(false);
-      //   console.log("onMouseLeave triggered, isHovered will be false");
-      // }}
     >
       {children}
 

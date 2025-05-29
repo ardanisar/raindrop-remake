@@ -3,7 +3,6 @@
 import React from "react";
 import LikesComments from "./LikesComments";
 import LikesComments1 from "./LikesComments1";
-// import { useState } from "react";
 import HoverProfile from "./HoverProfile";
 
 type ArticleCardProps = {
@@ -12,8 +11,6 @@ type ArticleCardProps = {
 };
 
 function ArticleCard({ article, className }: ArticleCardProps) {
-  // const [isHovered, setIsHovered] = useState(false);
-
   const formatDate = (dateString: string) => {
     const options: Intl.DateTimeFormatOptions = {
       month: "short",
@@ -27,7 +24,6 @@ function ArticleCard({ article, className }: ArticleCardProps) {
     // mulai dari class o q
     <div className="flex justify-center">
       <div className="904px:max-w-[680px] mx-[24px] min-w-0 w-full">
-        {/* mt-[32px] untuk article ke-2 dan seterusnya */}
         <div className={`block w-full ${className}`}>
           <article className="block">
             <div className="box-content block">
@@ -39,10 +35,8 @@ function ArticleCard({ article, className }: ArticleCardProps) {
                     <div className="relative">
                       <div className="w-full">
                         {/* profil pict and name */}
-                        {/* class o */}
                         <div className="flex">
                           <div className="mb-[16px] items-center flex">
-                            {/* <div style={{ padding: 50 }}> */}
                             <HoverProfile
                               profileData={{
                                 name: "Rustem Mussabekov",
@@ -57,20 +51,6 @@ function ArticleCard({ article, className }: ArticleCardProps) {
                                   {/* profil pict */}
 
                                   <div
-                                    // onMouseEnter={() => setIsHovered(true)}
-                                    // onMouseLeave={() => setIsHovered(false)}
-                                    // onMouseEnter={() => {
-                                    //   setIsHovered(true);
-                                    //   console.log(
-                                    //     "onMouseEnter triggered, isHovered will be true"
-                                    //   );
-                                    // }}
-                                    // onMouseLeave={() => {
-                                    //   setIsHovered(false);
-                                    //   console.log(
-                                    //     "onMouseLeave triggered, isHovered will be false"
-                                    //   );
-                                    // }}
                                     className="block"
                                     aria-hidden="false"
                                     aria-describedby="1"
@@ -97,19 +77,9 @@ function ArticleCard({ article, className }: ArticleCardProps) {
                                       </a>
                                     </div>
                                   </div>
-                                  {/* hover profile */}
-                                  {/* {isHovered && (
-                                  <HoverProfile
-                                    name={article.author.name}
-                                    avatar={article.author.avatar}
-                                    bio={article.author.bio}
-                                    followers={article.author.followers}
-                                  />
-                                )} */}
                                 </div>
                               </div>
                             </HoverProfile>
-                            {/* </div> */}
                             {/* profil name */}
                             <HoverProfile
                               profileData={{
@@ -122,8 +92,6 @@ function ArticleCard({ article, className }: ArticleCardProps) {
                             >
                               <div>
                                 <div
-                                  // onMouseEnter={() => setIsHovered(true)}
-                                  // onMouseLeave={() => setIsHovered(false)}
                                   className="y"
                                   aria-hidden="false"
                                   aria-describedby="2"
@@ -183,7 +151,6 @@ function ArticleCard({ article, className }: ArticleCardProps) {
                                 <img
                                   alt="AI Suggestions"
                                   className="rounded-[2px] bg-[#F9F9F9] align-middle h-[53px] aspect-[80/53];"
-                                  // src="https://miro.medium.com/v2/resize:fill:160:106/1*0ki5wk-IQYttRhPoro8EoA.png"
                                   src={article.coverImage}
                                   width="80"
                                   height="53"
@@ -194,7 +161,6 @@ function ArticleCard({ article, className }: ArticleCardProps) {
                                 <img
                                   alt="AI Suggestions"
                                   className="rounded-[2px] bg-[#F9F9F9] align-middle h-[107px] aspect-[160/107]"
-                                  // src="https://miro.medium.com/v2/resize:fill:320:214/1*0ki5wk-IQYttRhPoro8EoA.png"
                                   src={article.coverImage}
                                   width="160"
                                   height="107"

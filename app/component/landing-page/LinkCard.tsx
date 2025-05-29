@@ -8,7 +8,6 @@ type LinkCardProps = {
   href1: string;
   href2?: string;
   showIcon?: boolean;
-  // svg?: string;
   showSvg?: boolean;
 };
 
@@ -20,7 +19,6 @@ function LinkCard({
   href1,
   href2,
   showIcon,
-  // svg,
   showSvg,
 }: LinkCardProps) {
   return (

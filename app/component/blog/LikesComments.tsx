@@ -1,8 +1,5 @@
-// "use client";
-
 import React from "react";
 import Tooltip from "./Tooltip";
-// import { useState } from "react";
 
 type LikesCommentsProps = {
   publishedAt: any;
@@ -11,7 +8,6 @@ type LikesCommentsProps = {
 };
 
 function LikesComments({ publishedAt, likes, comments }: LikesCommentsProps) {
-  // const [isHovered, setIsHovered] = useState(false);
   return (
     <>
       <div className="728px:hidden pt-[12px]">
