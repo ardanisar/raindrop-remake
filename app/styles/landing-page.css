@@ -69,12 +69,6 @@ img, video {
     background: #fff;
 }
 
-.contentoxL5 {
-    margin: 0 auto;
-    max-width: 1060px;
-    padding: 0 30px;
-}
-
 .toolbar2CHY {
     height: 64px;
     display: flex;
@@ -320,10 +314,6 @@ a {
 
 .buttonYAU-[data-appearance=''] {
     color: #0b7ed0;
-}
-.buttonYAU-[data-size='big'] {
-    font-size: 1.125rem;
-    padding: 10px 24px;
 }
 
 .message2nN3 {
@@ -647,71 +637,6 @@ svg {
     fill: currentcolor;
 }
 
-a {
-    text-decoration: none;
-    color: #0b7ed0;
-}
-
-.footerSy6B {
-    border-top: 0.5px solid rgba(0, 0, 0, 0.15);
-    margin-top: 24px;
-    padding: 24px 0;
-}
-
-.footerSy6B menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footerSy6B menu li {
-    padding: 0;
-    margin: 0;
-    display: block;
-}
-
-.footerSy6B menu li a {
-    padding: 4px 0;
-    display: block;
-    color: #333;
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-.copy2CzI {
-    font-size: 0.875rem;
-    line-height: 140%;
-    color: #808080;
-    display: flex
-;
-}
-
-
-.copy2CzI .logo1Thp {
-    margin-right: 16px;
-}
-
-.copy2CzI .about1uw1 {
-    flex: 1;
-}
-
-.copy2CzI .about1uw1 .twitterIcon1g61 {
-    vertical-align: -2px;
-    margin-right: 2px;
-}
-
-.copy2CzI a {
-    color: inherit;
-    text-decoration: underline;
-    margin-right: 16px;
-}
-
-@media only screen and (min-width: 1001px) {
-    .ferrari1vBH, .columns2vfz {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 .ferrari1vBH {
     display: grid;
     grid-template-columns: 1fr;
@@ -721,7 +646,6 @@ a {
 
 @media only screen and (min-width: 1001px) {
     .ferrari1vBH {
-        /* grid-template-columns: 1fr; */
         grid-template-columns: 1fr 1fr 1fr;
     }
 }

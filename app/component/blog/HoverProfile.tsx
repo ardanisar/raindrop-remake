@@ -5,12 +5,6 @@ import { usePopper } from "react-popper";
 
 type HoverProfileProps = {
   children: React.ReactNode;
-  // profileData: {
-  //   name: string;
-  //   avatar: string;
-  //   bio: string;
-  //   followers: string;
-  // };
   profileData: Author;
 };
 
