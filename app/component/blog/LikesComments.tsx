@@ -1,13 +1,13 @@
 import React from "react";
 import Tooltip from "./Tooltip";
+import { Stats } from "@/data/mockArticles";
 
 type LikesCommentsProps = {
   publishedAt: any;
-  likes: any;
-  comments: any;
+  stats: Stats;
 };
 
-function LikesComments({ publishedAt, likes, comments }: LikesCommentsProps) {
+function LikesComments({ publishedAt, stats }: LikesCommentsProps) {
   return (
     <>
       <div className="728px:hidden pt-[12px]">
@@ -22,12 +22,11 @@ function LikesComments({ publishedAt, likes, comments }: LikesCommentsProps) {
                   </div>
                   <a
                     className="z-2 relative flex items-center gap-[16px] transition-opacity duration-300 ease-out"
-                    // className="z-2 relative flex items-center transition-opacity duration-300 ease-out opacity-1"
                     tabIndex={-1}
                     rel="noopener follow"
                     href="/ai-suggestions-5a85762ae176?source=collection_home_page----64dc68379046-----0-----------------------------------"
                   >
-                    <Tooltip text={`${likes} claps`}>
+                    <Tooltip text={`${stats.likes} claps`}>
                       <div>
                         <div
                           className="flex"
@@ -55,13 +54,13 @@ function LikesComments({ publishedAt, likes, comments }: LikesCommentsProps) {
                                   clipRule="evenodd"
                                 ></path>
                               </svg>
-                              <span>{likes}</span>
+                              <span>{stats.likes}</span>
                             </div>
                           </div>
                         </div>
                       </div>
                     </Tooltip>
-                    <Tooltip text={`${comments} responses`}>
+                    <Tooltip text={`${stats.comments} responses`}>
                       <div>
                         <div
                           className="flex"
@@ -87,7 +86,7 @@ function LikesComments({ publishedAt, likes, comments }: LikesCommentsProps) {
                                   d="M12.344 11.458A5.28 5.28 0 0 0 14 7.526C14 4.483 11.391 2 8.051 2S2 4.483 2 7.527c0 3.051 2.712 5.526 6.059 5.526a6.6 6.6 0 0 0 1.758-.236q.255.223.554.414c.784.51 1.626.768 2.512.768a.37.37 0 0 0 .355-.214.37.37 0 0 0-.03-.384 4.7 4.7 0 0 1-.857-1.958v.014z"
                                 ></path>
                               </svg>
-                              <span>{comments}</span>
+                              <span>{stats.comments}</span>
                             </div>
                           </div>
                         </div>

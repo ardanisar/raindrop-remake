@@ -5,7 +5,6 @@ import { mockArticles } from "@/data/mockArticles";
 import ArticleCard from "../component/blog/ArticleCard";
 import Sidebar from "../component/blog/Sidebar";
 import "../styles/blog.css";
-import Script from "next/script";
 
 function page() {
   return (

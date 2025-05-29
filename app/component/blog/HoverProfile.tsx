@@ -1,15 +1,17 @@
+import { Author } from "@/data/mockArticles";
 import React, { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { usePopper } from "react-popper";
 
 type HoverProfileProps = {
   children: React.ReactNode;
-  profileData: {
-    name: string;
-    avatar: string;
-    bio: string;
-    followers: string;
-  };
+  // profileData: {
+  //   name: string;
+  //   avatar: string;
+  //   bio: string;
+  //   followers: string;
+  // };
+  profileData: Author;
 };
 
 function HoverProfile({ children, profileData }: HoverProfileProps) {

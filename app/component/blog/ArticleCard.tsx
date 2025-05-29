@@ -22,7 +22,6 @@ function ArticleCard({ article, className }: ArticleCardProps) {
   };
 
   return (
-    // mulai dari class o q
     <div className="flex justify-center">
       <div className="904px:max-w-[680px] mx-[24px] min-w-0 w-full">
         <div className={`block w-full ${className}`}>
@@ -37,15 +36,7 @@ function ArticleCard({ article, className }: ArticleCardProps) {
                         {/* profil pict and name */}
                         <div className="flex">
                           <div className="mb-[16px] items-center flex">
-                            <HoverProfile
-                              profileData={{
-                                name: "Rustem Mussabekov",
-                                avatar:
-                                  "https://miro.medium.com/v2/resize:fill:30:30/1*VFTN-MPKg_EG0tXiyQPG0g.jpeg",
-                                bio: "Founder of https://raindrop.io",
-                                followers: "1.8k",
-                              }}
-                            >
+                            <HoverProfile profileData={article.author}>
                               <div className="mr-[8px] block">
                                 <div>
                                   {/* profil pict */}
@@ -81,15 +72,7 @@ function ArticleCard({ article, className }: ArticleCardProps) {
                               </div>
                             </HoverProfile>
                             {/* profil name */}
-                            <HoverProfile
-                              profileData={{
-                                name: "Rustem Mussabekov",
-                                avatar:
-                                  "https://miro.medium.com/v2/resize:fill:30:30/1*VFTN-MPKg_EG0tXiyQPG0g.jpeg",
-                                bio: "Founder of https://raindrop.io",
-                                followers: "1.8k",
-                              }}
-                            >
+                            <HoverProfile profileData={article.author}>
                               <div>
                                 <div
                                   className="y"
@@ -140,8 +123,7 @@ function ArticleCard({ article, className }: ArticleCardProps) {
                             {/* likes, comment, small screen */}
                             <LikesComments1
                               publishedAt={formatDate(article.publishedAt)}
-                              likes={article.stats.likes}
-                              comments={article.stats.comments}
+                              stats={article.stats}
                             />
                           </div>
                           {/* image */}
@@ -173,8 +155,7 @@ function ArticleCard({ article, className }: ArticleCardProps) {
                         {/* like, comment, etc small screen*/}
                         <LikesComments
                           publishedAt={formatDate(article.publishedAt)}
-                          likes={article.stats.likes}
-                          comments={article.stats.comments}
+                          stats={article.stats}
                         />
                         <div></div>
                       </div>
