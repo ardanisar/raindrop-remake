@@ -99,7 +99,7 @@ function ArticleCard({ article, className }: ArticleCardProps) {
                         {/* article and image */}
                         <div className="flex">
                           {/* article*/}
-                          <div className="break-words block flex-[1_1_0%] min-w-0 max-w-[464px]">
+                          <div className="break-words block flex-1 min-w-0">
                             {/* article */}
                             <div className="break-words">
                               <a
@@ -127,7 +127,7 @@ function ArticleCard({ article, className }: ArticleCardProps) {
                             />
                           </div>
                           {/* image */}
-                          <div className="ml-[24px] 728px:ml-[56px] block">
+                          <div className="flex-shrink-0 ml-[24px] 728px:ml-[56px] block">
                             <div aria-label={article.title}>
                               <div className="728px:hidden">
                                 <img
