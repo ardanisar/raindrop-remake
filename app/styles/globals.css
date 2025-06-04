@@ -24,7 +24,13 @@ body {
   --breakpoint-904px: 904px;
   --breakpoint-900px: 900px;
   --breakpoint-800px: 800px;
+  --breakpoint-551.98px: 551.98px;
   --breakpoint-552px: 552px;
   --breakpoint-728px: 728px;
   --breakpoint-368px: 368px;
+}
+
+img, video {
+  max-width: none;
+  height: auto;
 }

@@ -15,7 +15,7 @@ function LikesComments1({ publishedAt, stats }: LikesComments1Props) {
           <div className="justify-between h-[48px] flex-[1_0_auto] flex">
             <div className="gap-[16px] items-center flex">
               <span>{publishedAt}</span>
-              <div className="">
+              <div className="lcb">
                 <div className="h-[16px] w-max-[200px] relative items-center flex">
                   <div className="flex items-center gap-[16px] transition-opacity duration-300 ease-out opacity-0 absolute">
                     <div className="w-[80px] h-[16px] bg-[#F2F2F2] ml-[16px] block"></div>
@@ -96,47 +96,42 @@ function LikesComments1({ publishedAt, stats }: LikesComments1Props) {
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-4">
-              <Tooltip text="Save">
-                <div className="flex items-center justify-end">
-                  <div className="">
-                    <div>
-                      <div
-                        className="inline-block"
-                        aria-hidden="false"
-                        aria-describedby="967"
-                        aria-labelledby="967"
+            {/* bookmark */}
+            <Tooltip text="Save">
+              <div className="lcb flex items-center justify-end flexx-[0_0_0] h-[48px] w-[49px] p-[12px]">
+                <div
+                  className="inline-block"
+                  aria-hidden="false"
+                  aria-describedby="4"
+                  aria-labelledby="4"
+                >
+                  <div tabIndex={-1} className="no-outline">
+                    <span>
+                      <a
+                        className="relative cursor-pointer z-[2] m-0 p-0"
+                        href="https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fbookmark%2Fp%2F5a85762ae176&amp;operation=register&amp;redirect=https%3A%2F%2Fblog.raindrop.io%2Fai-suggestions-5a85762ae176&amp;source=----64dc68379046-----0-----------------bookmark_preview------------------"
+                        rel="noopener follow"
                       >
-                        <div tabIndex={-1} className="no-outline">
-                          <span>
-                            <a
-                              className="z-2 relative cursor-pointe"
-                              href="https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fbookmark%2Fp%2F5a85762ae176&amp;operation=register&amp;redirect=https%3A%2F%2Fblog.raindrop.io%2Fai-suggestions-5a85762ae176&amp;source=----64dc68379046-----0-----------------bookmark_preview------------------"
-                              rel="noopener follow"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="25"
-                                height="25"
-                                fill="none"
-                                viewBox="0 0 25 25"
-                                className="hover:text-[#242424]"
-                                aria-label="Add to list bookmark button"
-                              >
-                                <path
-                                  fill="currentColor"
-                                  d="M18 2.5a.5.5 0 0 1 1 0V5h2.5a.5.5 0 0 1 0 1H19v2.5a.5.5 0 1 1-1 0V6h-2.5a.5.5 0 0 1 0-1H18zM7 7a1 1 0 0 1 1-1h3.5a.5.5 0 0 0 0-1H8a2 2 0 0 0-2 2v14a.5.5 0 0 0 .805.396L12.5 17l5.695 4.396A.5.5 0 0 0 19 21v-8.5a.5.5 0 0 0-1 0v7.485l-5.195-4.012a.5.5 0 0 0-.61 0L7 19.985z"
-                                ></path>
-                              </svg>
-                            </a>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="25"
+                          fill="currentColor"
+                          viewBox="0 0 25 25"
+                          className="align-middle"
+                          aria-label="Add to list bookmark button"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M18 2.5a.5.5 0 0 1 1 0V5h2.5a.5.5 0 0 1 0 1H19v2.5a.5.5 0 1 1-1 0V6h-2.5a.5.5 0 0 1 0-1H18zM7 7a1 1 0 0 1 1-1h3.5a.5.5 0 0 0 0-1H8a2 2 0 0 0-2 2v14a.5.5 0 0 0 .805.396L12.5 17l5.695 4.396A.5.5 0 0 0 19 21v-8.5a.5.5 0 0 0-1 0v7.485l-5.195-4.012a.5.5 0 0 0-.61 0L7 19.985z"
+                          ></path>
+                        </svg>
+                      </a>
+                    </span>
                   </div>
                 </div>
-              </Tooltip>
-            </div>
+              </div>
+            </Tooltip>
           </div>
         </span>
       </div>

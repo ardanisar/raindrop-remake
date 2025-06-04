@@ -10,9 +10,11 @@ body {
   --breakpoint-904px: 904px;
   --breakpoint-900px: 900px;
   --breakpoint-800px: 800px;
+  --breakpoint-551.98px: 551.98px;
   --breakpoint-552px: 552px;
   --breakpoint-728px: 728px;
   --breakpoint-368px: 368px;
+  --breakpoint-903.98px: 903.98px;
 }
 
 .bg-fade-gradient {
@@ -106,7 +108,7 @@ body {
   }
 }
 
- @media (max-width: 551.98px) {
+ @media (max-width: 727.98px) {
   .raindrop-logo {
     height: 40px;
     width: 209px;
@@ -185,16 +187,67 @@ body {
   overflow-x: scroll;
   align-items: center;
   display: flex;
-  max-width: 368px;
+  /* max-width: 368px; */
 }
 
-.blog-nav-list {
+/* .blog-nav-list-active {
   min-width: max-content;
   border-bottom: 1px solid #242424;
   padding-bottom: 16px;
   margin-right: 32px;
   display: block;
+} */
+
+/* .blog-nav-list {
+  min-width: max-content;
+  border-bottom: 1px solid #F2F2F2;
+  padding-bottom: 16px;
+  margin-right: 32px;
+  display: block;
 }
+
+.blog-nav-list [aria-current="true"]{
+  border-bottom: #242424;
+}
+
+.blog-nav-list p [aria-current="true"]{
+  color: #242424;
+} */
+
+.blog-nav-list-link {
+  min-width: max-content;
+  border-bottom: 1px solid #F2F2F2;
+  padding-bottom: 16px;
+  margin-right: 32px;
+  display: block;
+  text-decoration: none;
+  font-weight: 400;
+  /* text-rendering:optimizeLegibility; */
+
+}
+
+.blog-nav-list-link .nav-text {
+  color: #6B6B6B;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  /* letter-spacing: 0.022em; */
+}
+
+/* Aktif (aria-current="true") */
+.blog-nav-list-link.active {
+  border-bottom: 1px solid #242424;
+}
+
+.blog-nav-list-link.active .nav-text {
+  color: #242424;
+}
+
+/* Hover effect */
+.blog-nav-list-link:hover .nav-text {
+  color: #242424;
+}
+
 
 .profil-img-article {
   width: 20px;
@@ -257,4 +310,119 @@ body {
       width: 100%;
       padding-top: 10px;
   }
+}
+
+.article h2 {
+  font-weight: 700;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #242424;
+  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 551.98px) {
+.article h2 {
+    letter-spacing: 0;
+    -webkit-line-clamp: 4;
+    max-height: 96px;
+    line-height: 24px;
+    font-size: 20px;
+}
+}
+
+@media (min-width: 1080px) {
+.article h2 {
+    letter-spacing: -0.016em;
+    -webkit-line-clamp: 3;
+    max-height: 90px;
+    line-height: 30px;
+    font-size: 24px;
+  }
+}
+
+ @media (min-width: 904px) and (max-width: 1079.98px) {
+  .author-bio {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
+.sign-up {
+  border-color: rgba(77, 122, 255, 1);
+  background: rgba(77, 122, 255, 1);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 99em;
+  fill: #FFFFFF;
+  color: #FFFFFF;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+@media (min-width: 1080px) {
+    .sign-up {
+        line-height: 20px;
+        /* font-size: 14px; */
+    }
+}
+
+@media (min-width: 1080px) {
+    .sign-up a {
+        padding: 5px 12px;
+        font-size: 13px;
+        line-height: 20px;
+    }
+}
+
+/* Media query untuk ukuran layar 904px - 1079.98px */
+@media (min-width: 904px) and (max-width: 1079.98px) {
+  .sign-up {
+    padding: 5px 12px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+ @media (min-width: 904px) and (max-width: 1079.98px) {
+  .sign-in {
+        line-height: 20px;
+        font-size: 14px;
+    }
+}
+
+/* .img-editor {
+  width: 32px;
+  height: 32px;
+  aspect-ratio: 32/32;
+} */
+
+input::placeholder {
+  color: rgba(0,0,0,0.8);
+}
+
+
+/* @media (min-width: 552px) and (max-width: 727.98px) {
+.big-img-article {   
+    display: none;
+}
+} */
+
+ @media (min-width: 904px) and (max-width: 936px) {
+  .lcb {
+      display: none;
+    }
+}
+
+.connect {
+  font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }

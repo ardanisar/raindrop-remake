@@ -5,6 +5,9 @@ import LikesComments from "./LikesComments";
 import LikesComments1 from "./LikesComments1";
 import HoverProfile from "./HoverProfile";
 import { Article } from "@/data/mockArticles";
+import Profile from "./Profile";
+import ArticleItem from "./ArticleItem";
+import { formatDate } from "@/app/utils/formatDate";
 
 type ArticleCardProps = {
   article: Article;
@@ -12,18 +15,9 @@ type ArticleCardProps = {
 };
 
 function ArticleCard({ article, className }: ArticleCardProps) {
-  const formatDate = (dateString: string) => {
-    const options: Intl.DateTimeFormatOptions = {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    };
-    return new Date(dateString).toLocaleDateString("en-US", options);
-  };
-
   return (
     <div className="flex justify-center">
-      <div className="904px:max-w-[680px] mx-[24px] min-w-0 w-full">
+      <div className="728px:max-w-[680px] mx-[24px] min-w-0 w-full">
         <div className={`block w-full ${className}`}>
           <article className="block">
             <div className="box-content block">
@@ -34,124 +28,9 @@ function ArticleCard({ article, className }: ArticleCardProps) {
                     <div className="relative">
                       <div className="w-full">
                         {/* profil pict and name */}
-                        <div className="flex">
-                          <div className="mb-[16px] items-center flex">
-                            <HoverProfile profileData={article.author}>
-                              <div className="mr-[8px] block">
-                                <div>
-                                  {/* profil pict */}
-
-                                  <div
-                                    className="block"
-                                    aria-hidden="false"
-                                    aria-describedby="1"
-                                    aria-labelledby="1"
-                                  >
-                                    <div tabIndex={-1} className="outline-none">
-                                      <a
-                                        tabIndex={-1}
-                                        href="https://medium.com/@exentrich?source=collection_home_page----64dc68379046-----0-----------------------------------"
-                                        rel="noopener follow"
-                                        className="relative z-2"
-                                      >
-                                        <div className="block relative">
-                                          <img
-                                            alt={article.author.name}
-                                            className="profil-img-article"
-                                            src={article.author.avatar}
-                                            width="20"
-                                            height="20"
-                                            loading="lazy"
-                                          />
-                                          <div className="profile-pict-article"></div>
-                                        </div>
-                                      </a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </HoverProfile>
-                            {/* profil name */}
-                            <HoverProfile profileData={article.author}>
-                              <div>
-                                <div
-                                  className="y"
-                                  aria-hidden="false"
-                                  aria-describedby="2"
-                                  aria-labelledby="2"
-                                >
-                                  <div tabIndex={-1} className="dd">
-                                    <a
-                                      className="cm aq cn co cp at cq au av aw ax ay az jf o p"
-                                      href="https://medium.com/@exentrich?source=collection_home_page----64dc68379046-----0-----------------------------------"
-                                      rel="noopener follow"
-                                    >
-                                      <p className="text-[#242424] text-[13px] text-ellipsis break-all max-h-[20px] overflow-hidden font-normal hover:underline">
-                                        {article.author.name}
-                                      </p>
-                                    </a>
-                                  </div>
-                                </div>
-                              </div>
-                            </HoverProfile>
-                          </div>
-                        </div>
+                        <Profile author={article.author} />
                         {/* article and image */}
-                        <div className="flex">
-                          {/* article*/}
-                          <div className="break-words block flex-1 min-w-0">
-                            {/* article */}
-                            <div className="break-words">
-                              <a
-                                className="flex-col flex static cursor-pointer m-0 p-0 z-2"
-                                rel="noopener follow"
-                                href={article.link}
-                              >
-                                <h2
-                                  className="leading-[30px] text-[24px] font-[700] text-ellipsis overflow-hidden text-[#242424] m-0"
-                                  style={{ letterSpacing: "-0.016em" }}
-                                >
-                                  {article.title}
-                                </h2>
-                                <div className="pt-[8px]">
-                                  <h3 className="max-h-[40px] 904px:max-h-none text-ellipsis overflow-hidden text-[16px] text-[#6B6B6B] leading-[20px] font-[400]">
-                                    {article.excerpt}
-                                  </h3>
-                                </div>
-                              </a>
-                            </div>
-                            {/* likes, comment, small screen */}
-                            <LikesComments1
-                              publishedAt={formatDate(article.publishedAt)}
-                              stats={article.stats}
-                            />
-                          </div>
-                          {/* image */}
-                          <div className="flex-shrink-0 ml-[24px] 728px:ml-[56px] block">
-                            <div aria-label={article.title}>
-                              <div className="728px:hidden">
-                                <img
-                                  alt={article.title}
-                                  className="rounded-[2px] bg-[#F9F9F9] align-middle w-[80px] h-[53px] object-cover"
-                                  src={article.coverImage}
-                                  width="80"
-                                  height="53"
-                                  loading="lazy"
-                                />
-                              </div>
-                              <div className="hidden 728px:block">
-                                <img
-                                  alt={article.title}
-                                  className="rounded-[2px] bg-[#F9F9F9] align-middle w-[160px] h-[107px] object-cover"
-                                  src={article.coverImage}
-                                  width="160"
-                                  height="107"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                        <ArticleItem article={article} />
                         {/* like, comment, etc small screen*/}
                         <LikesComments
                           publishedAt={formatDate(article.publishedAt)}

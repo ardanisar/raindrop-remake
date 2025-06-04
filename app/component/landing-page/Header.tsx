@@ -1,17 +1,52 @@
+"use client";
+
+import { useEffect } from "react";
 import React from "react";
+import Navbar from "./Navbar";
+import DropdownButton from "./DropdownButton";
+import { OptionType } from "./DropdownButton";
 
 function Header() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const insetValue = window.scrollY > 0 ? 100 : 0;
+      document.documentElement.style.setProperty(
+        "--scrollview-inset-value",
+        `${insetValue}`
+      );
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Set initial value on load
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const dropdownOptions: OptionType[] = [
+    { value: "-1", label: "Menu", href: "", disabled: true },
+    { value: "0", label: "Download", href: "/download" },
+    { value: "1", label: "Pricing", href: "/pro/buy" },
+    { value: "2", label: "Integrations", href: "/integrations" },
+    { value: "3", label: "Blog", href: "/blog" },
+    { value: "4", label: "About", href: "/about" },
+    { separator: true },
+    { value: "6", label: "Login", href: "/account/login" },
+  ];
+
   return (
     <header
-      className="header1jtx backdrop-blur-[20px] bg-white/70"
-      style={
-        {
-          "--scrollview-inset-value": "0",
-        } as React.CSSProperties
-      }
+      className="header-lp relative"
+      // style={
+      //   {
+      //     "--scrollview-inset-value": "0",
+      //   } as React.CSSProperties
+      // }
     >
-      <div className="contentoxL5 toolbar2CHY">
-        <div className="logoZTSe">
+      <div className="content toolbar">
+        {/* logo */}
+        <div className="logo h-[36.6667px]">
           <a href="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -67,23 +102,8 @@ function Header() {
             </svg>
           </a>
         </div>
-        <menu className="nav4SBj">
-          <li data-active="false">
-            <a href="/download">Download</a>
-          </li>
-          <li data-active="false">
-            <a href="/pro/buy">Pricing</a>
-          </li>
-          <li data-active="false">
-            <a href="/integrations">Integrations</a>
-          </li>
-          <li data-active="false">
-            <a href="/blog">Blog</a>
-          </li>
-          <li data-active="false">
-            <a href="https://help.raindrop.io/about">About</a>
-          </li>
-        </menu>
+        <Navbar />
+        {/* login icon */}
         <menu className="min-w-[161px] justify-end">
           <li data-active="false" className="cursor-pointer hover:bg-[#F5F5F5]">
             <a href="https://app.raindrop.io/account/login">
@@ -103,18 +123,7 @@ function Header() {
             </a>
           </li>
         </menu>
-        <label className="hamburgerButton1pOy">
-          <select>
-            <option value="-1">Menu</option>
-            <option value="0">Download</option>
-            <option value="1">Pricing</option>
-            <option value="2">Integrations</option>
-            <option value="3">Blog</option>
-            <option value="4">About</option>
-            <option disabled>--------</option>
-            <option value="6">Login</option>
-          </select>
-        </label>
+        <DropdownButton options={dropdownOptions} />
       </div>
     </header>
   );

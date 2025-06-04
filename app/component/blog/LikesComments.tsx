@@ -98,7 +98,7 @@ function LikesComments({ publishedAt, stats }: LikesCommentsProps) {
             </div>
             <div className="flex items-center gap-4">
               <Tooltip text="Save">
-                <div className="flex items-center justify-end">
+                <div className="flex items-center justify-end p-[12px]">
                   <div className="hidden 368px:block">
                     <div>
                       <div
